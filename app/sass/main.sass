@@ -1,0 +1,1198 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 30px
+  box-sizing: border-box
+  font-family: $default-font
+  height: 50px
+  width: 100%
+  border: none
+  position: relative
+  color: #651A16
+  font-size: 18px
+  border-radius: 10px
+  background: rgba(#FFE454, .2)
+  &::placeholder
+    color: #651A16
+
+.error
+  select, input
+    color: #FD3D21
+    border: 1px solid #FD3D21
+    &::placeholder
+      color: #FD3D21
+
+
+select
+  background: rgba(#FFE454, .2) url("../img/arrow-bottom.svg") no-repeat calc(100% - 35px) center
+    size: 12px
+
+label
+  display: block
+  width: 100%
+  margin: 0 0 15px
+
+.consent
+  font-size: 18px
+  background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  margin: 0 0 0 auto
+  max-width: 200px
+  width: 100%
+
+.form-bottom
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 20px 0 0
+
+.form
+  max-width: 420px
+  width: 100%
+
+strong
+  font-weight: 600
+  display: inline-block
+
+h1
+  font-size: 80px
+  font-family: $title-font
+  color: $accent
+  width: 100%
+  margin: 0 0 15px
+  line-height: 1.3
+
+h2
+  text-transform: lowercase
+  width: 100%
+  font-family: $title-font
+  font-size: 50px
+  line-height: 1.3
+  margin: 0 0 65px
+  background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.subtitle
+  font-size: 20px
+
+.price
+  color: $accent
+  font-size: 18px
+
+  p
+    font-weight: 600
+    color: #fff
+
+
+.new-price
+  font-size: 37px
+  font-family: $title-font
+  text-transform: uppercase
+
+.old-price
+  text-decoration-line: line-through
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  outline: none
+  padding: 12px 47px
+  border: none
+  cursor: pointer
+  font-size: 18px
+  border-radius: 30px
+  position: relative
+  z-index: 1
+  height: 60px
+  width: fit-content
+
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    transition: .3s ease
+    height: 100%
+    width: 130px
+    z-index: -2
+    filter: blur(20px)
+    background: #FFE454
+    border-radius: 30px
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn-accent
+  color: #fff
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border-radius: 30px
+    z-index: -1
+    background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+  &:hover
+
+    font-weight: 600
+    color: #fff
+    &:before
+      background: linear-gradient(58.61deg, #EC1E00 0%, #FFF500 100%)
+    &:after
+      filter: blur(50px)
+
+  &:focus
+    color: #fff
+    font-weight: 600
+    &:before
+      background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+    &:after
+      background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+      filter: blur(50px)
+
+.btn-blue
+  color: #fff
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border-radius: 30px
+    z-index: -1
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+  &:after
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+    opacity: 0.5
+
+  &:hover
+
+    font-weight: 600
+    color: #fff
+    &:before
+      background: linear-gradient(90deg, #00FF66 0%, #0075FF 100%)
+    &:after
+      filter: blur(50px)
+      opacity: 1
+
+  &:focus
+
+    color: #fff
+    font-weight: 600
+    &:before
+      background: linear-gradient(58.61deg, #EC1E00 0%, #FFF500 100%)
+    &:after
+      background: #FFE454
+      filter: blur(50px)
+      opacity: 1
+
+.container
+  max-width: 1330px
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+//header
+header
+  padding: 10px 0
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 2
+
+.menu
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  text-transform: none
+  margin: 0 auto 0 0
+
+  li
+    margin: 0 40px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      color: #fff
+
+//main
+main
+  position: relative
+  padding: 70px 0 150px
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 1174px
+    height: 1043px
+    background: url("../img/bg1.png") no-repeat center top
+      size: 100%
+
+.main-img
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  position: relative
+  z-index: 1
+  max-width: 330px
+  width: 100%
+  margin: 0 0 0 auto
+
+  &:before
+    content: ''
+    position: absolute
+    background: #FFE454
+    filter: blur(100px)
+    opacity: .5
+    width: 350px
+    height: 350px
+    border-radius: 50%
+    z-index: -1
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+  img
+    width: 100%
+
+.sale-box
+  position: absolute
+  top: 79px
+  left: -50px
+  width: 100px
+  height: 100px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  border-radius: 50%
+  background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+  font-size: 30px
+  text-transform: uppercase
+  font-family: $title-font
+  color: #fff
+
+.main-content
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  height: 100%
+  color: #fff
+
+.advantages
+  margin: 40px 0 50px
+  max-width: 420px
+  width: 100%
+  font-size: 18px
+
+  li
+    margin: 0 0 30px
+    display: flex
+    align-items: center
+
+    &:last-child
+      margin: 0
+
+.advantages-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  background: #fff
+  width: 40px
+  height: 40px
+  min-width: 40px
+  margin: 0 10px 0 0
+  position: relative
+  z-index: 1
+
+  img
+    z-index: 1
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #fff
+    border-radius: 50%
+
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    background: linear-gradient(58.61deg, #D0280F 0%, #E4A400 100%)
+    filter: blur(15px)
+    width: 100%
+    height: 100%
+    z-index: -1
+
+.stages-order
+  padding: 100px 0
+
+.section-decor-bg1
+  position: relative
+
+  &:after
+    content: ''
+    position: absolute
+    height: 826px
+    width: 550px
+    background: url("../img/bg2.png") no-repeat center
+      size: 100%
+    z-index: -1
+    right: -350px
+    top: 0
+
+.stages-order-box
+  text-align: center
+  color: #651A16
+  font-size: 18px
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    top: 65px
+    right: -35px
+    width: 50px
+    height: 2px
+    background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+
+  p
+    max-width: 260px
+    width: 100%
+    margin: 0 auto
+
+.stages-order-box__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 50%
+  background: #fff
+  width: 130px
+  height: 130px
+  position: relative
+  z-index: 1
+  margin: 0 auto 15px
+  padding: 40px 35px
+  transition: .3s ease
+  cursor: pointer
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    background: #fff
+    z-index: 1
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(58.61deg, #D0280F 0%, #E4A400 100%)
+    filter: blur(30px)
+    opacity: .2
+    z-index: -1
+    border-radius: 50%
+
+  .icon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 1
+    transition: .3s ease
+
+  &:hover
+    &:before
+      background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+
+
+.stages-order-box1
+  .icon
+    background: url("../img/edit.svg") no-repeat center
+      size: contain
+
+  &:hover
+    .icon
+      background: url("../img/edit-hover.svg") no-repeat center
+        size: contain
+
+.stages-order-box2
+  .icon
+    background: url("../img/verify.svg") no-repeat center
+      size: contain
+
+  &:hover
+    .icon
+      background: url("../img/verify-hover.svg") no-repeat center
+        size: contain
+
+.stages-order-box3
+  .icon
+    background: url("../img/secure.svg") no-repeat center
+      size: contain
+
+  &:hover
+    .icon
+      background: url("../img/secure-hover.svg") no-repeat center
+        size: contain
+
+.stages-order-box4
+  &:before
+    display: none
+
+  .icon
+    background: url("../img/dollar.svg") no-repeat center
+      size: contain
+
+  &:hover
+    .icon
+      background: url("../img/dollar-hover.svg") no-repeat center
+        size: contain
+
+//service
+.service
+  padding: 150px 0
+
+.service-box
+  position: relative
+  z-index: 1
+  width: calc(100% - 20px)
+  margin: 0 0 0 auto
+  height: 100%
+  border-radius: 30px
+  color: #fff
+  padding: 20px
+
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: calc(100% - 76px)
+    background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+    border-radius: 30px
+    left: 0
+    bottom: 0
+    z-index: -1
+
+  &:after
+    content: ''
+    position: absolute
+    left: -20px
+    top: 56px
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+    width: 200px
+    height: 200px
+    border-radius: 30px
+    opacity: .5
+    z-index: -2
+
+  h3
+    color: $accent
+    font-size: 30px
+    width: 100%
+    text-transform: lowercase
+    line-height: 1
+    margin: 0 0 10px
+    font-family: $title-font
+
+  .box-text
+    font-size: 18px
+    line-height: 22px
+
+    p
+      margin: 0 0 20px
+
+      &:last-child
+        margin: 0
+
+.font-16
+  .box-text
+    font-size: 16px
+
+.service-box__img
+  width: 100%
+  margin: 0 auto 5px
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+
+  img
+    max-height: 250px
+
+.img-item
+  position: absolute
+  left: 30px
+  bottom: 10px
+  filter: drop-shadow(-10px 10px 15px rgba(0, 0, 0, 0.2))
+
+
+//formula
+.formula
+  padding: 0 0 120px
+
+
+.formula-img
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  position: relative
+
+.section-decor-bg2
+  position: relative
+
+  &:before
+    content: ''
+    position: absolute
+    left: -390px
+    top: -50px
+    width: 550px
+    height: 826px
+    background: url("../img/bg3.png") no-repeat center
+      size: 100%
+
+
+.formula-img-product
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  max-width: 256px
+  z-index: 1
+
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    bottom: 79px
+    transform: translate(-50%, 0)
+    border-radius: 50%
+    filter: blur(100px)
+    background: #FFE454
+    opacity: .5
+    width: 271px
+    height: 271px
+    z-index: -1
+
+  img
+    width: 100%
+
+.formula-img__decor
+  position: absolute
+  max-width: 458px
+  width: 100%
+  z-index: -1
+  right: 0
+  top: 50%
+  transform: translate(0, -50%)
+
+.formula-content
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+
+  h2
+    margin: 0 0 30px
+
+  .box-text
+    color: #651A16
+    font-size: 25px
+
+
+.box-text
+  p
+    margin: 0 0 20px
+
+    strong
+      display: inline
+
+    &:last-child
+      margin: 0
+
+//instruction-work
+.instruction-work
+  padding: 150px 0
+  h2
+    text-transform: none
+
+.instruction-work-wrapper
+  position: relative
+  width: 100%
+  z-index: 1
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: -67px
+    width: 100%
+    height: 582px
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+    transform: rotate(-6.87deg)
+    border-radius: 50px
+    opacity: .5
+
+  h2
+    margin: 0 auto 30px
+    text-align: center
+    color: #fff
+    background: transparent
+    background-clip: initial
+    -webkit-text-fill-color: initial
+
+    span
+      display: block
+
+.color-accent
+  color: $accent
+
+.instruction-work-content
+  position: relative
+  overflow: hidden
+  width: 100%
+  padding: 50px 110px 74px
+  z-index: 1
+  background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+  border-radius: 50px
+
+  &:before
+    content: ''
+    position: absolute
+    right: -100px
+    top: 110px
+    background: url("../img/decor1.png") no-repeat center
+      size: 100%
+    width: 633px
+    height: 892px
+
+.video-js
+  width: 100%
+  height: 100%
+  object-fit: cover
+  border-radius: 30px
+  overflow: hidden
+
+.instruction-work-video
+  position: relative
+  width: 100%
+  height: 450px
+
+
+.btn-play
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 83px
+  height: 83px
+  background: url("../img/play.svg") no-repeat center
+    size: 100%
+  &:hover
+    background: url("../img/play-hover.svg") no-repeat center
+      size: 100%
+
+//about
+.about
+  padding: 70px 0 200px
+
+  h2
+    margin: 0 0 30px
+    max-width: 420px
+    width: 100%
+
+.about-photo
+  position: relative
+  max-width: 424px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 30px 0 auto
+
+.about-photo-decor
+  position: absolute
+
+.about-photo-decor1
+  width: 300px
+  height: 300px
+  background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+  opacity: .5
+  border-radius: 30px
+  top: 58px
+  right: -73px
+  z-index: -1
+  overflow: hidden
+
+  &:before
+    content: ''
+    position: absolute
+    width: 633px
+    height: 892px
+    background: url("../img/decor2.png") no-repeat center
+      size: 100%
+    opacity: 1
+    top: -127px
+    right: -95px
+
+.about-photo-decor2
+  position: absolute
+  left: 50%
+  bottom: 0
+  transform: translate(-50%, 0)
+  width: 490px
+  height: 523px
+  background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+  border-radius: 30px
+  z-index: -1
+  overflow: hidden
+
+  &:before
+    content: ''
+    position: absolute
+    width: 633px
+    height: 892px
+    background: url("../img/decor2.png") no-repeat center
+      size: 100%
+    opacity: 1
+    bottom: -150px
+    left: 2px
+
+.about-content
+  .box-text
+    color: #651A16
+    font-size: 25px
+
+    .color-gradient
+      font-weight: bold
+
+    p
+      margin: 0 0 30px
+
+.color-gradient
+  background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.name-author
+  margin: 30px 0 0
+  font-size: 18px
+  color: #651A16
+
+//recommended
+.recommended
+  padding: 20px 0 150px
+
+  h2
+    margin: 0 0 40px
+
+.recommended-content
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+
+.recommended-img
+  max-width: 630px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+//reviews
+.reviews
+  padding: 0 0 100px
+
+.reviews-box
+  position: relative
+  z-index: 1
+  width: calc(100% - 20px)
+  margin: 0 0 0 auto
+  height: 100%
+  border-radius: 30px
+  color: #fff
+  padding: 40px 20px 48px
+
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: calc(100% - 20px)
+    background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
+    border-radius: 30px
+    left: 0
+    bottom: 0
+    z-index: -1
+
+  &:after
+    content: ''
+    position: absolute
+    left: -20px
+    top: 0
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+    width: 200px
+    height: 200px
+    border-radius: 30px
+    opacity: .5
+    z-index: -2
+
+  h3
+    color: $accent
+    font-size: 30px
+    width: 100%
+    text-transform: lowercase
+    line-height: 1
+    margin: 0 0 10px
+    font-family: $title-font
+
+  .box-text
+    font-size: 18px
+    line-height: 22px
+
+    p
+      margin: 0 0 20px
+
+      &:last-child
+        margin: 0
+
+.reviews-box-photos
+  width: 100%
+  display: flex
+  align-items: stretch
+  margin: 0 0 20px
+  border-radius: 30px 30px 0 0
+  overflow: hidden
+
+.reviews-box-photo
+  width: 50%
+  height: 100px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.reviews-box-photo__title
+  position: absolute
+  padding: 5px 10px
+  color: #101010
+  font-size: 20px
+  text-transform: lowercase
+  font-family: $title-font
+  left: 0
+  bottom: 0
+
+//stages-order-two
+.stages-order-two
+  &:before
+    left: -425px
+    top: -100px
+  .btn
+    margin: 0 0 0 auto
+
+//instruction-work-two
+.instruction-work-two
+  .box-text
+    color: #fff
+    text-align: center
+    margin: 0 auto 50px
+    max-width: 878px
+    width: 100%
+    font-size: 20px
+
+.instruction-work-slider
+  width: 100%
+  padding: 0 50px
+
+.instruction-work-box
+  margin: 0 auto
+  max-width: 310px
+  width: 100%
+  height: 370px
+  border-radius: 30px
+  overflow: hidden
+  filter: drop-shadow(0px 5px 40px rgba(231, 127, 31, 0.5))
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.slick-arrow
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  width: 41px
+  height: 41px
+  border-radius: 50%
+  padding: 0
+  border: none
+
+.slick-next
+  right: 0
+  background: url("../img/arrow-right.svg") no-repeat center
+    size: 100%
+
+.slick-prev
+  left: 0
+  background: url("../img/arrow-left.svg") no-repeat center
+    size: 100%
+
+//callback
+.callback
+  padding: 0 0 120px
+  h2
+    span
+      text-transform: none
+      display: block
+      color: $accent
+      -webkit-text-fill-color: initial
+
+.callback-img
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  &:after
+    content: ''
+    top: 141px
+    left: 30px
+    position: absolute
+    width: 458px
+    height: 339px
+    background: url("../img/formula.png") no-repeat center
+      size: 100%
+  .price
+    margin: auto 0 83px 0
+    p
+      color: #651A16
+  .old-price, .new-price
+    background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    width: fit-content
+  .old-price
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      width: 100%
+      height: 2px
+      background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
+      z-index: 1
+
+.callback-img-wrap
+  position: relative
+  max-width: 330px
+  width: 100%
+  z-index: 1
+
+  &:before
+    content: ''
+    position: absolute
+    z-index: -1
+    bottom: 102px
+    left: 50%
+    transform: translate(-50%,0)
+    background: #FFE454
+    opacity: .5
+    filter: blur(100px)
+    border-radius: 50%
+    width: 350px
+    height: 350px
+  img
+    width: 100%
+
+//footer
+footer
+  padding: 50px 0 20px
+  color: #fff
+  background: #651A16
+
+.list-pay
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 0 auto
+
+  li
+    margin: 0 36px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      max-width: 65px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+
+.footer-box
+  margin: 0 0 60px
+  font-size: 18px
+
+  h3
+    text-transform: uppercase
+    margin: 0 0 15px
+    color: #FFE454
+    font-size: 36px
+    font-family: $title-font
+
+  a
+    color: #fff
+
+  p
+    margin: 0 0 20px
+
+    &:last-child
+      margin: 0
+
+  .mail
+    margin: 0 0 20px
+
+.footer-menu
+  li
+    margin: 0 0 20px
+
+    &:last-child
+      margin: 0
+
+
+@import "media"
+// Всегда в конце

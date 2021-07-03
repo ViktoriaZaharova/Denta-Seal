@@ -141,7 +141,7 @@ label
   align-items: flex-start
   flex-wrap: wrap
   justify-content: space-between
-  margin: 20px 0 0
+  margin: 35px 0 0
 
 .form
   max-width: 420px
@@ -166,6 +166,7 @@ h2
   font-size: 50px
   line-height: 1.3
   margin: 0 0 65px
+  background-clip: text
   background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
@@ -225,7 +226,6 @@ h2
 
 .btn-accent
   color: #fff
-
   &:before
     content: ''
     position: absolute
@@ -237,14 +237,12 @@ h2
     z-index: -1
     background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
   &:hover
-
     font-weight: 600
     color: #fff
     &:before
       background: linear-gradient(58.61deg, #EC1E00 0%, #FFF500 100%)
     &:after
       filter: blur(50px)
-
   &:focus
     color: #fff
     font-weight: 600
@@ -256,7 +254,6 @@ h2
 
 .btn-blue
   color: #fff
-
   &:before
     content: ''
     position: absolute
@@ -270,9 +267,7 @@ h2
   &:after
     background: linear-gradient(90deg, #2AF598 0%, #009EFD 100%)
     opacity: 0.5
-
   &:hover
-
     font-weight: 600
     color: #fff
     &:before
@@ -280,9 +275,7 @@ h2
     &:after
       filter: blur(50px)
       opacity: 1
-
   &:focus
-
     color: #fff
     font-weight: 600
     &:before
@@ -325,11 +318,54 @@ header
     a
       color: #fff
 
+.btn-close
+  display: none
+  width: 20px
+  height: 20px
+  position: absolute
+  right: 20px
+  top: 20px
+  cursor: pointer
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 10px
+    top: 0
+    width: 2px
+    height: 100%
+    background: $accent
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(135deg)
+
+.btn-card
+  display: none
+  width: 20px
+  height: 16px
+  align-items: center
+  justify-content: center
+
+.btn-burger
+  width: 18px
+  height: 8px
+  align-items: center
+  justify-content: space-between
+  cursor: pointer
+  display: none
+  flex-direction: column
+  span
+    background: #ffffff
+    width: 100%
+    height: 2px
+    display: block
+
 //main
 main
   position: relative
   padding: 70px 0 150px
-
+  .btn
+    display: none
   &:before
     content: ''
     position: absolute
@@ -902,6 +938,7 @@ main
   background: linear-gradient(58.61deg, #FD3D21 0%, #F9BD23 100%)
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+  background-clip: text
 
 .name-author
   margin: 30px 0 0
@@ -1059,6 +1096,7 @@ main
   border-radius: 50%
   padding: 0
   border: none
+  z-index: 2
 
 .slick-next
   right: 0
@@ -1074,11 +1112,12 @@ main
 .callback
   padding: 0 0 120px
   h2
+    margin: 0 0 35px
     span
       text-transform: none
-      display: block
       color: $accent
       -webkit-text-fill-color: initial
+      background: transparent
 
 .callback-img
   position: relative
